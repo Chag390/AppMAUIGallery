@@ -8,5 +8,13 @@
             Text="NET MAUI Gallery"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Label Text="Inicio"/>
+        <Label Text="Extra"/>
+        <Label Text="Créditos"/>
+
+        <Label Text="Layout"/>
+        <Label Text="StackLaout"/>
+        <Label Text="bla bla bla bla...."/>
+
     </VerticalStackLayout>
 </ContentPage>
