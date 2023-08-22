@@ -5,7 +5,7 @@
              Title="Menu">
     <VerticalStackLayout>
         <Label 
-            Text="NET MAUI Gallery"
+            Text="Menu"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <Label Text="Inicio"/>
