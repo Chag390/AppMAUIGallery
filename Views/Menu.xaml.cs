@@ -31,7 +31,7 @@ public partial class Menu : ContentPage
 
                 var lblComponentDescription = new Label();
 				lblComponentDescription.Text = component.Description;
-				lblComponentDescription.Margin = new Thickness (20,20,0,0);
+				lblComponentDescription.Margin = new Thickness (20,5,0,0);
 				lblComponentDescription.GestureRecognizers.Add (tap);
 
                 MenuContainer.Children.Add(lblComponentTitle);
@@ -44,10 +44,16 @@ public partial class Menu : ContentPage
 	{
 		var label = (Label) sender;
 		var tap = (TapGestureRecognizer)label.GestureRecognizers[0];
-		var page = (Page)tap.CommandParameter;
+		var page = (Type)tap.CommandParameter;
 
-		((FlyoutPage)App.Current.MainPage).Detail = page;
+        ((FlyoutPage)App.Current.MainPage).Detail = new NavigationPage((Page)Activator.CreateInstance(page));
         ((FlyoutPage)App.Current.MainPage).IsPresented = false;
 
+    }
+
+    private void OnTapInicio(object sender, TappedEventArgs e)
+    {
+        ((FlyoutPage)App.Current.MainPage).Detail = new NavigationPage(new AppMAUIGallery.Views.Layouts.StackLayoutPage());
+        ((FlyoutPage)App.Current.MainPage).IsPresented = false;
     }
 }

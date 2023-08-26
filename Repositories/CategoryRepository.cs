@@ -22,7 +22,7 @@ namespace AppMAUIGallery.Repositories
                     new Component {
                         Title = "StackLayout",
                         Description = "Organização sequencial dos elementos.",
-                        Page = new StackLayoutPage()
+                        Page = typeof(StackLayoutPage)
                     }
                 }
             });

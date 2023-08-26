@@ -14,11 +14,15 @@
             FontFamily="OpenSansSemibold"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Label Text="Inicio"/>
+        <Label Text="Inicio">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnTapInicio"/>
+            </Label.GestureRecognizers>
+        </Label>
         <Label Text="Extra"/>
         <Label Text="Créditos"/>
 
-        <VerticalStackLayout Margin="0,10,0,0" x:Name="MenuContainer">
+        <VerticalStackLayout Margin="0,0,0,0" x:Name="MenuContainer">
             
             
         </VerticalStackLayout>
