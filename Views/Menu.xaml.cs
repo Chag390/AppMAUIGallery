@@ -53,7 +53,7 @@ public partial class Menu : ContentPage
 
     private void OnTapInicio(object sender, TappedEventArgs e)
     {
-        ((FlyoutPage)App.Current.MainPage).Detail = new NavigationPage(new AppMAUIGallery.Views.Layouts.StackLayoutPage());
+        ((FlyoutPage)App.Current.MainPage).Detail = new NavigationPage(new AppMAUIGallery.Views.MainPage());
         ((FlyoutPage)App.Current.MainPage).IsPresented = false;
     }
 }
