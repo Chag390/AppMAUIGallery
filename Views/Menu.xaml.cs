@@ -28,6 +28,7 @@ public partial class Menu : ContentPage
 				var lblComponentTitle = new Label();
 				lblComponentTitle.Text = component.Title;
 				lblComponentTitle.FontFamily = "OpenSansSemibold";
+				//lblComponentTitle.FontAttributes = FontAttributes.Bold; colocar negrito
 				lblComponentTitle.Margin = new Thickness(20,20,0,0);
 				lblComponentTitle.GestureRecognizers.Add(tap);
 
