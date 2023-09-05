@@ -22,6 +22,7 @@ public partial class Menu : ContentPage
 				var tap = new TapGestureRecognizer();
 				tap.CommandParameter = component.Page;
 				tap.Tapped += OnTapComponent;
+				lblCategory.Margin = new Thickness(0, 20, 0, 0);
 
 				var lblComponentTitle = new Label();
 				lblComponentTitle.Text = component.Title;
