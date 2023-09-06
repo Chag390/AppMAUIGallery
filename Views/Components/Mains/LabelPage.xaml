@@ -10,5 +10,22 @@
             TextDecorations="Underline"
             TextTransform="Uppercase"
             />
+        <Label
+            TextType="Html"
+            Text="Bem vindo ao .NET MAUI! &lt;i> Você está gostando do MAUI?&lt;/i>"
+             >
+        </Label>
+        <Label TextType="Html">
+             <Label.Text>
+                <![CDATA[
+                <i>Olá mundo!</i> <br /> <strong>Como vai você? </strong>
+                ]]>
+             </Label.Text>
+         </Label>
+            
+            
+            
+            
+        
     </VerticalStackLayout>
 </ContentPage>
