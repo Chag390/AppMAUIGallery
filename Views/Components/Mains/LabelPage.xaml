@@ -23,6 +23,8 @@
                LineHeight="1"
                LineBreakMode="TailTruncation"
                />
+
+        <Label Text=".NET MAUI" BackgroundColor="#f2f2f2" VerticalTextAlignment="Center" HeightRequest="500" HorizontalTextAlignment="Center" Padding="10" FontSize="20" FontAttributes="Bold"/>
         <Label Padding="10">
             <Label.FormattedText>
                 <FormattedString>
