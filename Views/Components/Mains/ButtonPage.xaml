@@ -14,6 +14,11 @@
                 HorizontalOptions="Center"
                 Margin="10"
                 
+                HeightRequest="60"
+                
+                ImageSource="dotnet_bot.png"
+                ContentLayout="Left, 5"
+                
                 Clicked="Button_Clicked"
                 Pressed="Button_Pressed"
                 Released="Button_Released"
