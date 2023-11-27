@@ -100,6 +100,6 @@ namespace AppMAUIGallery.Repositories
                 }
             });
             return categories;
-        },
+        }
     }
 }
