@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AppMAUIGallery.Views.Components.Visuals;
 
 namespace AppMAUIGallery.Repositories
 {
@@ -85,7 +86,19 @@ namespace AppMAUIGallery.Repositories
 
                 }
             });
-
+            categories.Add(new Category()
+            {
+                Name = "Visuais",
+                Components = new List<Component>
+                {
+                    new Component
+                    {
+                        Title = "Frame",
+                        Description = "Caixa que envolve outros elementos",
+                        Page = typeof(FramePage)
+                    },
+                }
+            });
             return categories;
         }
     }
