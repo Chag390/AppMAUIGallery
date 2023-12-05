@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AppMAUIGallery.Views.Components.Visuals;
+using AppMAUIGallery.Views.Components.Forms;
 
 namespace AppMAUIGallery.Repositories
 {
@@ -102,6 +103,26 @@ namespace AppMAUIGallery.Repositories
                         Title = "Border",
                         Description = "Caixa que envolve outros elementos",
                         Page = typeof(BorderPage)
+                    },
+                    new Component
+                    {
+                        Title = "Shadow",
+                        Description = "Caixa que envolve outros elementos",
+                        Page = typeof(ShadowPage)
+                    },
+                    
+                }
+            });
+            categories.Add(new Category()
+            {
+                Name = "Formulários",
+                Components = new List<Component>
+                {
+                    new Component
+                    {
+                        Title = "Entry",
+                        Description = "Caixa de entrada de texto. ",
+                        Page = typeof(EntryPage)
                     },
                 }
             });

@@ -6,10 +6,13 @@
     <VerticalStackLayout Padding="10" >
         <Border Padding="10" 
                 Stroke="Blue" 
-                StrokeThickness="1" 
-                StrokeLineJoin="Bevel" 
+                StrokeThickness="10" 
+                
+                StrokeLineJoin="Round" 
+                StrokeLineCap="Round"
+                
                 StrokeDashArray="1,1,3,1,5,2"
-                StrokeDashOffset="1"
+                StrokeDashOffset="4"
                 
                 
                 >
@@ -18,6 +21,20 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         </Border>
-        
+        <Border Padding="10"
+                Stroke="blue">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10" />
+            </Border.StrokeShape>
+            <Label Text="OI como vai?"/>
+        </Border>
+
+        <Border Padding="10"
+                Stroke="blue"
+                StrokeShape="RoundRectangle 5, 10, 15, 20">
+            
+            <Label Text="OI como vai?"/>
+        </Border>
+
     </VerticalStackLayout>
 </ContentPage>
