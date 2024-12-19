@@ -124,6 +124,12 @@ namespace AppMAUIGallery.Repositories
                         Description = "Caixa de entrada de texto. ",
                         Page = typeof(EntryPage)
                     },
+                    new Component
+                    {
+                        Title = "Editor",
+                        Description = "Caixa de entrada de texto de multiplas linhas. ",
+                        Page = typeof(EditorPage)
+                    },
                 }
             });
             return categories;

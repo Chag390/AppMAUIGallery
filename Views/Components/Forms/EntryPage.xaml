@@ -11,7 +11,7 @@
             TextColor="Red"
             FontSize="16"
             
-            IsPassword="False"
+            IsPassword="True"
             ClearButtonVisibility="WhileEditing"
             
             CursorPosition="2"
