@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMAUIGallery.Views.Cells.ImageCellPage"
+             Title="ImageCellPage">
+    <VerticalStackLayout>
+
+        <TableView>
+            <TableSection Title="Lista de colaboradores">
+
+                <ImageCell 
+                           ImageSource="https://faarq.ufpa.br/wp-content/uploads/2020/11/nathalia_nascimento-50x50.png" 
+                           Text="Maria Rodrigues" 
+                           Detail="Analista de Sistema" 
+                           DetailColor="Gray" 
+                           TextColor="Blue"
+                           
+                           />
+
+            </TableSection>
+        </TableView>
+        
+    </VerticalStackLayout>
+</ContentPage>

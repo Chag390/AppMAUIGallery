@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMAUIGallery.Views.Components.Forms.CheckBoxPage"
+             Title="CheckBoxPage">
+    <VerticalStackLayout>
+        <Label 
+            x:Name="LblStatus"
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <HorizontalStackLayout >
+            <CheckBox Color="Purple" CheckedChanged="CheckBox_CheckedChanged" IsChecked="False" />
+            <Label Text="PHP" VerticalOptions="Center"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <CheckBox Color="Blue" CheckedChanged="CheckBox_CheckedChanged" IsChecked="False" />
+            <Label Text="C#" VerticalOptions="Center"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <CheckBox Color="Red" CheckedChanged="CheckBox_CheckedChanged" IsChecked="False" />
+            <Label Text="Java" VerticalOptions="Center"/>
+        </HorizontalStackLayout>
+        
+    </VerticalStackLayout>
+</ContentPage>

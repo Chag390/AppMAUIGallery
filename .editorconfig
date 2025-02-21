@@ -1,0 +1,7 @@
+﻿[*.cs]
+
+# IDE0059: Atribuição desnecessária de um valor
+dotnet_diagnostic.IDE0059.severity = none
+
+# IDE0040: Adicionar modificadores de acessibilidade
+dotnet_diagnostic.IDE0040.severity = none

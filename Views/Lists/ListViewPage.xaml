@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMAUIGallery.Views.Lists.ListViewPage"
+             Title="ListViewPage">
+    <ListView x:Name="ListViewControl"
+              HasUnevenRows="True"
+              IsPullToRefreshEnabled="True"
+              Refreshing="ListViewControl_Refreshing"
+              ItemSelected="ListViewControl_ItemSelected" 
+              SelectionMode="Single"
+              SeparatorColor="Black"
+              RefreshControlColor="Aqua"
+              SeparatorVisibility="Default" 
+              IsGroupingEnabled="True"
+              
+              
+              
+              >
+        
+        <ListView.Header>
+            <Button Clicked="Button_Clicked" Text="Carregar"/>
+        </ListView.Header>
+        <ListView.GroupHeaderTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <VerticalStackLayout Padding="10" BackgroundColor="Purple">
+                        <Label 
+                               Text="{Binding CompanyName}" 
+                               FontAttributes="Bold" 
+                               TextColor="White"/>
+                    </VerticalStackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.GroupHeaderTemplate>
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <VerticalStackLayout>
+                        <Label Text= "{Binding Name}" FontSize="18" FontAttributes="Bold"/>
+                        <Label Text= "{Binding Description}" TextColor="Gray" />
+                        <HorizontalStackLayout>
+                            <Label Text= "{Binding LaunchYear}"  Margin="10"/>
+                            <Label Text= "{Binding Duration}" Margin="10"/>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

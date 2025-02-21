@@ -4,6 +4,6 @@ public partial class EditorPage : ContentPage
 {
 	public EditorPage()
 	{
-		InitializeComponent();
+        InitializeComponent();
 	}
 }
