@@ -5,20 +5,28 @@ using System.Text;
 using System.Threading.Tasks;
 using AppMAUIGallery.Models;
 using AppMAUIGallery.Repositories;
+using Bumptech.Glide.Load.Model;
 
 
 namespace AppMAUIGallery.Repositories
 {
-    public class GroupComponentRepository : IGroupComponentRepository1
+    public partial class GroupComponentRepository : IGroupComponentRepository1
     {
+        private List<Component> _components;
+        private List<GroupComponent> _groupcomponents;
+        public GroupComponentRepository()
+        {
+            LoadData();
+        }
+
         public List<Component> GetComponents()
         {
-            throw new NotImplementedException();
+            return _components;
         }
 
         public List<GroupComponent> GetGroupsComponents()
         {
-            throw new NotImplementedException();
+            return _groupcomponents;
         }
     }
 
