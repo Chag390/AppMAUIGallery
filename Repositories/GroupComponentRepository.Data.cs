@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using AppMAUIGallery.Models;
 using AppMAUIGallery.Repositories;
+using AppMAUIGallery.Views.Cells;
 using AppMAUIGallery.Views.Components.Forms;
 using AppMAUIGallery.Views.Components.Mains;
 using AppMAUIGallery.Views.Components.Visuals;
 using AppMAUIGallery.Views.Layouts;
+using AppMAUIGallery.Views.Lists;
+using AppMAUIGallery.Views.Lists.Model;
 using Microsoft.Office.Interop.Outlook;
 
 
@@ -25,7 +28,9 @@ namespace AppMAUIGallery.Repositories
             LoadLayouts();
             LoadControls();
             LoadVisuals();
-            LoadForms();    
+            LoadForms();  
+            LoadCells();   
+            LoadCollections();
         }
 
         private void LoadLayouts()
@@ -67,7 +72,6 @@ namespace AppMAUIGallery.Repositories
 
 
         }
-
         private void LoadControls()
         {
             var components = new List<Component>
@@ -112,7 +116,6 @@ namespace AppMAUIGallery.Repositories
             _groupcomponents.Add(group); // Adicionando o grupo de componentes na lista de grupos de componentes
 
         }
-
         private void LoadVisuals()
         {
             var components = new List<Component>
@@ -145,7 +148,6 @@ namespace AppMAUIGallery.Repositories
             _groupcomponents.Add(group); // Adicionando o grupo de componentes na lista de grupos de componentes
 
         }
-
         private void LoadForms()
         {
             var components = new List<Component>
@@ -228,5 +230,110 @@ namespace AppMAUIGallery.Repositories
             _groupcomponents.Add(group); // Adicionando o grupo de componentes na lista de grupos de componentes
 
         }
+        private void LoadCells()
+        {
+            var components = new List<Component>
+            {
+                new Component
+                {
+                    Title = "TextCell",
+                    Description = "Apresenta duas labels onde uma é destinada ao títuo e outra descrição.",
+                    Page = typeof(TextCellPage)
+                },
+                new Component
+                {
+                    Title = "ImageCell",
+                    Description = "Apresenta uma imagem com duas labels onde uma é destinada ao títuo e outra descrição.",
+                    Page = typeof(ImageCellPage)
+                },
+                new Component
+                {
+                    Title = "SwitchCell",
+                    Description = "Apresenta uma label em conjunto com um switch.",
+                    Page = typeof(SwitchCellsPage)
+                },
+                new Component
+                {
+                    Title = "EntryCell",
+                    Description = "Apresenta uma label em conjunto com um entry.",
+                    Page = typeof(EntryCellPage)
+                },
+                new Component
+                {
+                    Title = "ViewCell",
+                    Description = "Permite criar a nossa célular com layout personalizado.",
+                    Page = typeof(ViewCellPage)
+                },
+            
+            };
+
+            var group = new GroupComponent() { Name = "Células" }; // Criando um grupo de componentes
+            group.AddRange(components);
+
+            _components.AddRange(components); // Adicionando os componentes na lista de componentes
+            _groupcomponents.Add(group); // Adicionando o grupo de componentes na lista de grupos de componentes
+
+        }
+        private void LoadCollections()
+        {
+                var components = new List<Component>
+                {
+                    new Component
+                    {
+                        Title = "TableView",
+                        Description = "Apresenta células em linhas separadas e permite agrupar por seção.",
+                        Page = typeof(TableViewPage)
+                    },
+
+                    new Component
+                    {
+                        Title = "Picker",
+                        Description = "Apresenta uma lista de seleção unica.",
+                       Page = typeof(PickerListPage)
+                    },
+
+                    new Component
+                    {
+                        Title = "listView",
+                        Description = "Apresenta uma lista e itens.",
+                       Page = typeof(ListViewPage)
+                    },
+                    new Component
+                    {
+                        Title = "CollectionView",
+                        Description = "Apresenta uma lista e itens.",
+                       Page = typeof(CollectionViewPage0)
+                    },
+                    new Component
+                    {
+                        Title = "CarouselView",
+                        Description = "Apresenta uma lista de itens horizontais com navegação lateral.",
+                       Page = typeof(CarouselViewPage)
+                    },
+                    new Component
+                    {
+                        Title = "BindableLayout (Atributo)",
+                        Description = "Permite que os layouts possam apresentar listas e coleções",
+                       Page = typeof(BindableLayoutPage)
+                    },
+                    new Component
+                    {
+                        Title = "DataTemplateSelector (Classe)",
+                        Description = "Permitir que os itens possam ser apresentados com layout diferente",
+                       Page = typeof(DataTemplateSelectorPage)
+                    }
+
+                
+                };
+
+                var group = new GroupComponent() { Name = "Listas e Coleções" }; // Criando um grupo de componentes
+                group.AddRange(components);
+
+                _components.AddRange(components); // Adicionando os componentes na lista de componentes
+                _groupcomponents.Add(group); // Adicionando o grupo de componentes na lista de grupos de componentes
+
+        }
+
     }
+    
 }
