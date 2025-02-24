@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AppMAUIGallery.Models;
 using AppMAUIGallery.Repositories;
-using Bumptech.Glide.Load.Model;
+
 
 
 namespace AppMAUIGallery.Repositories

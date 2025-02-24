@@ -4,46 +4,20 @@ namespace AppMAUIGallery.Views;
 
 public partial class Menu : ContentPage
 {
+    private IGroupComponentRepository1 _repository;
 	public Menu()
 	{
 		InitializeComponent();
 
-		var categories = new CategoryRepository().GetCategories();
+        // TO DO - DI Dependency Injection
 
-		foreach (var category in categories)
-		{
-			var lblCategory = new Label();
-			lblCategory.Text = category.Name;
-			lblCategory.FontFamily = "OpenSansSemibold";
+        _repository = new GroupComponentRepository();
 
-			MenuContainer.Children.Add(lblCategory);
-            foreach (var component in category.Components)
-			{
-				var tap = new TapGestureRecognizer();
-				tap.CommandParameter = component.Page;
-				tap.Tapped += OnTapComponent;
+        MenuCollection.ItemsSource = _repository.GetGroupsComponents();
 
-				lblCategory.Margin = new Thickness(0, 20, 0, 0); // code addd por mim
+    }
 
-				var lblComponentTitle = new Label();
-				lblComponentTitle.Text = component.Title;
-				lblComponentTitle.FontFamily = "OpenSansSemibold";
-				//lblComponentTitle.FontAttributes = FontAttributes.Bold; colocar negrito
-				lblComponentTitle.Margin = new Thickness(20,20,0,0);
-				lblComponentTitle.GestureRecognizers.Add(tap);
-
-                var lblComponentDescription = new Label();
-				lblComponentDescription.Text = component.Description;
-				lblComponentDescription.Margin = new Thickness (20,5,0,0);
-				lblComponentDescription.GestureRecognizers.Add (tap);
-
-                MenuContainer.Children.Add(lblComponentTitle);
-				MenuContainer.Children.Add(lblComponentDescription);
-            }
-        }
-	}
-
-	private void OnTapComponent ( object sender, EventArgs e )
+    private void OnTapComponent ( object sender, EventArgs e )
 	{
 		var label = (Label) sender;
 		var tap = (TapGestureRecognizer)label.GestureRecognizers[0];

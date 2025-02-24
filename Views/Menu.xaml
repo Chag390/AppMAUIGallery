@@ -5,26 +5,40 @@
              Title="Menu"
              Padding="20"
              BackgroundColor="#f3f3f3">
-    <ScrollView>      
-        <VerticalStackLayout Spacing="10" >
-            <Label 
-                Text="MAUI - Gallery"
-                Margin="30"
-                FontSize="24"
-                FontFamily="OpenSansSemibold"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
-            <Label Text="Inicio">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnTapInicio"/>
-                </Label.GestureRecognizers>
-            </Label>
-            <Label Text="Extra"/>
-            <Label Text="Créditos"/>
-
-            <VerticalStackLayout Margin="0,0,0,0" x:Name="MenuContainer">
-
+    <CollectionView x:Name="MenuCollection" IsGrouped="True">
+        <CollectionView.Header>
+            <VerticalStackLayout Spacing="10" >
+                <Label 
+                        Text="MAUI - Gallery"
+                        Margin="30"
+                        FontSize="24"
+                        FontFamily="OpenSansSemibold"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center" />   
+                <Label Text="Inicio">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapInicio"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="Extra"/>
+                <Label Text="Créditos"/>
             </VerticalStackLayout>
-        </VerticalStackLayout>
-    </ScrollView>
+        </CollectionView.Header>
+        <CollectionView.GroupHeaderTemplate>
+            <DataTemplate>
+                <Grid Padding="10">
+                    <Label Text="{Binding Name}" FontSize="20" FontAttributes="Bold" />
+                </Grid>
+            </DataTemplate>
+        </CollectionView.GroupHeaderTemplate>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <VerticalStackLayout>
+                    <Label Text="{Binding Title}" />
+                    <Label Text="{Binding Description}" />
+                </VerticalStackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+
+    </CollectionView>
 </ContentPage>

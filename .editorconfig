@@ -5,3 +5,6 @@ dotnet_diagnostic.IDE0059.severity = none
 
 # IDE0040: Adicionar modificadores de acessibilidade
 dotnet_diagnostic.IDE0040.severity = none
+
+# IDE0005: O uso da diretiva é desnecessário.
+dotnet_diagnostic.IDE0005.severity = none
