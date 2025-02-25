@@ -5,7 +5,8 @@
              Title="MainPage">
     <CollectionView x:Name="ComponentCollection">
         <CollectionView.Header>
-            <Entry Placeholder="Pesquisa..." />
+            <Entry Placeholder="Pesquisa..." TextChanged="Entry_TextChanged" 
+                  />
         </CollectionView.Header>
         <CollectionView.ItemTemplate>
             <DataTemplate>
