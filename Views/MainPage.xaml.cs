@@ -1,3 +1,4 @@
+using AppMAUIGallery.Libraries.Fix;
 using AppMAUIGallery.Models;
 using AppMAUIGallery.Repositories;
 using System.Collections.ObjectModel;
@@ -26,6 +27,9 @@ public partial class MainPage : ContentPage
 
     private void OnTapComponent(object sender, TappedEventArgs e)
     {
+
+        KeyboardFix.HideKeyboard();
+       
 
         var page = (Type)e.Parameter;
 
